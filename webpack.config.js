@@ -13,7 +13,7 @@ module.exports = {
   output: {
       path: path.resolve('./assets/bundles/'),
       //   filename: "[name]-[hash].js",
-        filename: "[name].js",
+      filename: "[name].js",
       // Tell django to use this URL to load packages and not use STATIC_URL + bundle_name
       publicPath: 'http://localhost:3000/assets/bundles/',
   },
@@ -24,17 +24,21 @@ module.exports = {
     new BundleTracker({filename: './webpack.stats.json'})
   ],
 
-  // module: {
-  //   loaders: [
-  //     {
-  //         test: /\.jsx?$/,
-  //         exclude: /node_modules/,
-  //         loaders: ['babel'],
-  //     },
-  //   ],
-  // },
+  module: {
+    loaders: [
+            {
+                test: /\.js$/,
+                loader: "babel-loader",
+                exclude: /node_modules/
+            },
+            {
+                include: /\.json$/,
+                loader: "json-loader"
+            },
+    ],
+  },
 
-  resolve: {
+   resolve: {
     modulesDirectories: ['node_modules'],
     extensions: ['', '.js']
   }

@@ -4,11 +4,22 @@
   "description": "A Test of Toga Django",
   "author": "Russell Keith-Magee",
   "license": "BSD-3-Clause",
-  "main": "index.js",
+  "main": "assets/js/togatest.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "babel-core": "6.18.2",
+    "babel-loader": "6.2.8",
+    "babel-preset-latest": "6.16.0",
+    "css-loader": "^0.26.1",
+    "eslint": "3.9.1",
+    "eslint-config-airbnb": "13.0.0",
+    "eslint-loader": "1.6.1",
+    "eslint-plugin-import": "2.1.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "6.6.0",
+    "json-loader": "0.5.4",
     "webpack-bundle-tracker": "^0.1.0",
     "webpack-dev-server": "^1.16.2"
   },
