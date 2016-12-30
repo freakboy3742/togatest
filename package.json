@@ -1,0 +1,19 @@
+{
+  "name": "togatest",
+  "version": "1.0.0",
+  "description": "A Test of Toga Django",
+  "author": "Russell Keith-Magee",
+  "license": "BSD-3-Clause",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@pybee/toga": "^0.0.2",
+    "webpack-bundle-tracker": "^0.1.0"
+  },
+  "devDependencies": {
+    "webpack-bundle-tracker": "^0.1.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

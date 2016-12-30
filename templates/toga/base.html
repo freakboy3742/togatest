@@ -1,0 +1,26 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        {% render_bundle 'main' %}
+        
+        <title>{{ app.main_window.title }}</title>
+
+        <style>
+            body {
+                padding-top: 5rem;
+            }
+        </style>
+{% block bytecode %}
+{% endblock %}
+    </head>
+    <body>
+{% block content %}
+{% endblock %}
+    </body>
+</head>

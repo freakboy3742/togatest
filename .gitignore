@@ -1,0 +1,15 @@
+*.pyc
+*~
+.*.sw[op]
+*.egg-info
+.coverage
+dist
+build
+_build
+distribute-*
+local
+.tox
+node_modules
+README.md
+webpack.stats.json
+.env
