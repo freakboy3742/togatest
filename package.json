@@ -6,7 +6,9 @@
   "license": "BSD-3-Clause",
   "main": "assets/js/togatest.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node_modules/.bin/webpack --progress --watch",
+    "serve": "node_modules/.bin/webpack-dev-server --inline --hot --port 3000"
   },
   "devDependencies": {
     "babel-core": "6.18.2",

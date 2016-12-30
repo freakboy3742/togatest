@@ -3,6 +3,7 @@
 .*.sw[op]
 *.egg-info
 .coverage
+db.sqlite
 dist
 build
 _build
@@ -13,3 +14,4 @@ node_modules
 README.md
 webpack.stats.json
 .env
+/assets/bundles/
