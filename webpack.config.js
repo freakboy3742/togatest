@@ -28,18 +28,31 @@ module.exports = {
     loaders: [
             {
                 test: /\.js$/,
-                loader: "babel-loader",
+                loader: "babel",
                 exclude: /node_modules/
             },
             {
                 include: /\.json$/,
-                loader: "json-loader"
+                loader: "json"
             },
-    ],
-  },
-
-   resolve: {
-    modulesDirectories: ['node_modules'],
-    extensions: ['', '.js']
+            {
+                test: /\.css$/,
+                // loader: ExtractTextPlugin.extract('style', 'css', 'resolve-url')
+                loaders: ['style', 'css']
+            },
+            {
+                test: /\.s?css$/,
+                // loader: ExtractTextPlugin.extract('style', 'css', 'sass', 'resolve-url')
+                loaders: ['style', 'css', 'sass']
+            },
+            {
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'url?limit=10000&mimetype=application/font-woff'
+            },
+            {
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'file'
+            }
+    ]
   }
 }
