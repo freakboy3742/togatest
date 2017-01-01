@@ -8,7 +8,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
         {% render_bundle 'main' %}
-        
+
         <title>{{ app.main_window.title }}</title>
 
         <style>
@@ -22,5 +22,8 @@
     <body>
 {% block content %}
 {% endblock %}
+    <hr>
+        <pre id="toga-console">
+        </pre>
     </body>
 </head>
