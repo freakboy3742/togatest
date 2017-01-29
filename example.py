@@ -1,24 +1,32 @@
 import toga
+from colosseum import CSS
 
 
 class Example(toga.App):
-    def button_handler(self, widget):
-        print("Hello,", self.text.value())
+    def load_page(self, widget):
+        print("Load URL", self.url_input.value())
+        self.webview.set_url(self.url_input.value())
 
     def startup(self):
         self.main_window = toga.MainWindow(self.name)
         self.main_window.app = self
 
-        box = toga.Box()
+        self.url_input = toga.TextInput(initial='http://pybee.org', placeholder='url...')
+        self.webview = toga.WebView(style=CSS(flex=1))
 
-        self.text = toga.TextInput(placeholder='something...')
-        box.add(self.text)
-
-        button = toga.Button('Hello world', on_press=self.button_handler)
-
-        button.style.set(margin=50)
-
-        box.add(button)
+        box = toga.Box(
+            children=[
+                toga.Box(
+                    children=[
+                        self.url_input,
+                        toga.Button('Go', on_press=self.load_page, style=CSS(width=50))
+                    ],
+                    style=CSS(flex_direction='row', padding=5)
+                ),
+                self.webview,
+            ],
+            style=CSS(flex_direction='column')
+        )
 
         self.main_window.title = self.name
         self.main_window.content = box
