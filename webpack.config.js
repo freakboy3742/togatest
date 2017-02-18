@@ -6,19 +6,19 @@ module.exports = {
     entry: [
         './togatest.js'
     ],
-
+    devtool: 'source-map',
     output: {
         path: path.join(__dirname, './assets/'),
         filename: "[name].js",
     },
-
+    target: 'web',
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
             minimize: true,
             sourceMap: true
         }),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin(), // don't reload if there is an error
+        // new webpack.HotModuleReplacementPlugin(),
+        // new webpack.NoEmitOnErrorsPlugin(), // don't reload if there is an error
     ],
     module: {
         rules: [
