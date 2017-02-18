@@ -4,8 +4,8 @@ from colosseum import CSS
 
 class Example(toga.App):
     def load_page(self, widget):
-        print("Load URL", self.url_input.value())
-        self.webview.set_url(self.url_input.value())
+        print("Load URL", self.url_input.value)
+        self.webview.url = self.url_input.value
 
     def startup(self):
         self.main_window = toga.MainWindow(self.name)
