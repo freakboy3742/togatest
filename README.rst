@@ -31,6 +31,10 @@ Install the Python and Javascript requirements of togatest::
     $ pip install -r requirements.txt
     $ npm install
 
+Compile the Javascript bundle::
+
+    $ npm run build
+
 Configure the togatest settings::
 
     $ cd togatest/settings/
@@ -47,10 +51,6 @@ Once this is done, you can perform the initial database migration::
 Run the Django server::
 
     $ ./manage.py runserver
-
-This will display a page without any styling. In a separate terminal window, run::
-
-    $ npm run serve
 
 ... and reload the page. This will load the page with bootstrap styling.
 If you press the "Go" button, it should load the nominated URL into the

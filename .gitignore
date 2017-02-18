@@ -14,5 +14,5 @@ node_modules
 README.md
 webpack.stats.json
 .env
-/assets/bundles/
+/assets
 venv
