@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'webpack_loader',
     'toga.django.TogaApp',
 ]
 
@@ -122,14 +121,3 @@ STATIC_ROOT = BASE_DIR('static')
 STATICFILES_DIRS = (
     BASE_DIR('assets'),
 )
-
-WEBPACK_LOADER = {
-    'DEFAULT': {
-        'CACHE': env('WEBPACK_CACHE'),
-        'BUNDLE_DIR_NAME': 'bundles/',
-        'STATS_FILE': BASE_DIR('webpack.stats.json'),
-        'POLL_INTERVAL': 0.1,
-        'TIMEOUT': None,
-        'IGNORE': ['.+\.hot-update.js', '.+\.map']
-    }
-}
