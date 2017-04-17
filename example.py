@@ -49,7 +49,7 @@ class Example(toga.App):
         c_label.style.set(width=100, margin_left=10)
         f_label.style.set(width=100, margin_left=10)
         join_label.style.set(width=150, margin_right=10)
-        button.style.set(margin=15)
+        button.style.set(margin_top=15)
 
         self.main_window.content = box
 
